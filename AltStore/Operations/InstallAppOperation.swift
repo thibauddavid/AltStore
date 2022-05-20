@@ -75,7 +75,7 @@ class InstallAppOperation: ResultOperation<InstalledApp>
             if
                 let bundle = Bundle(url: resignedApp.fileURL),
                 let directory = bundle.builtInPlugInsURL,
-                let enumerator = FileManager.default.enumerator(at: directory, includingPropertiesForKeys: nil, options: [.skipsSubdirectoryDescendants])
+                let enumerator = FileManager.default.enumerator(at: directory, includingPropertiesForKeys: nil, options: [])
             {
                 for case let fileURL as URL in enumerator
                 {
